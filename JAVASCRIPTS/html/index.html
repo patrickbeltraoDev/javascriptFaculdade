@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>JavaScritp</title>
+
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                background-color: beige;
+                font-size: 1.6em;
+            }
+
+            input{
+                padding: 3px;
+                margin-bottom: 10px;
+            }
+
+            .visor{
+                background-color: azure;
+                width: 400px;
+                font-size: 1.6em;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .operadores{
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .btn{
+                width: 40px;
+                height: 40px;
+                margin: 10px;
+                font-size: 1.2em;
+                padding: 8px;
+                display: flex;
+                align-items: center;
+            }
+
+            #limpar{
+                margin: 10px;
+                font-size: 1em;
+                padding: 6px;
+                display: flex;
+                align-items: center;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <label for="n1">Insira o primero valor</label>
+            <input type="text" id="n1">
+    
+            <label for="n2">Insira o segundo valor</label>
+            <input type="text" id="n2">
+
+            <div class="operadores">
+                <button class="btn" id="somar" onclick="somar()">+</button>
+                <button class="btn" id="subtrair" onclick="subtrair()">-</button>
+                <button class="btn" id="multiplicar" onclick="multiplicar()">*</button>
+                <button class="btn" id="divisão" onclick="divisao()">/</button>
+                <button id="limpar" onclick="limpar()">Limpar</button>
+            </div>
+            
+            <div class="visor" id="display">
+                
+        </div>
+
+        <script src="./javascript/script1.js"></script>
+        
+    </body>
+</html>

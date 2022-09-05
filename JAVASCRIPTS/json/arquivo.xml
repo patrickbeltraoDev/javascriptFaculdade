@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<correntistas>
+    <!-- Nesse documento há dados de duas 'pessoas' -->
+    <pessoa>
+        <tipo>física</tipo>
+        <nome>José Maria</nome>
+        <numero>000.000-00</numero>
+    </pessoa>
+    <pessoa>
+        <tipo>jurídica</tipo>
+        <nome>José Maria SA</nome>
+        <numero>111.111-11</numero>
+    </pessoa>
+</correntistas>
+
+<!-- ou pode usar os elementos filhos como atributos do elemento pai. -->
+
+<correntistas>
+    <conta agencia="0123-4" tipo="fisica" nome="José Maria" numero="000.000-00" />
+    <conta agencia="5678-9" tipo="jurídica" nome="José Maria SA" numero="111.111-11" />
+</correntistas>

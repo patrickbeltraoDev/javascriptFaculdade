@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manipulando Arquivos XML</title>
+    </head>
+    <body>
+
+        <p id="resultado"></p>
+
+
+        <script type="text/javascript">
+
+            //CRIANDO UM XML USANDO JAVASCRIPT.
+
+            var xmlString = '<?xml version="1.0" encoding="UTF-8" ?> \
+            <correntista>\
+            <conta agencia="0123-4">\
+            <tipo>Física</tipo>\
+            <nome>José Maria</nome>\
+            <numero>000.000.000-00</numero>\
+            </conta>\
+            <conta agencia="5678-9">\
+            <tipo>Jurídica</tipo>\
+            <nome>José Maria SA</nome>\
+            <numero>111.111.111-11</numero>\
+            </conta>\
+            </correntista>';
+
+            //CONVERTER A STRING ACIMA PARA UM DOCUMENTO XML VÁLIDO.
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xmlString, "text/xml");
+
+            //CHAMANDO A FUNÇÃO RESPONSÁVEL POR COLETAR E EXIBIR OS DADOS EM XML.
+            manipulaXML(xmlDoc);
+
+            function manipulaXML(xml){
+                document.getElementById('resultado').innerHTML = xml.getElementsByTagName("nome")[1].childNodes[0].nodeValue;
+            }
+
+        </script>
+        
+    </body>
+</html>
