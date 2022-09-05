@@ -10,7 +10,7 @@
 
         <h1>Converterndo um arquivo Json em Objeto JS para exibir os dados no HTML</h1>
 
-        <p id="resut"></p>
+        <p id="result"></p>
 
         <script type="text/javascript">
 
@@ -18,11 +18,12 @@
             var textoJson = '{"agencia": "5678-9", "tipo": "física", "nome": "Maria José", "numero": "222.222-22"}';
 
             //Converte o texto JSON em um objeto Javascript
-            var objetoJSON = JSON.parse(textoJson);
+            var objetoJS = JSON.parse(textoJson);
 
             //Exibe na tag html com id=resultado os dados da conta
-            document.getElementById('result').innerHTML = 'Agencia: ' + objetoJSON.agencia + 'Tipo: ' + objetoJSON.tipo + 'Nome: ' + 
-                objetoJSON.nome + 'Número: ' + objetoJSON.numero;
+            document.getElementById('result').innerHTML = 'Agencia: ' + objetoJS.agencia + '<br> Tipo: ' + objetoJS.tipo + '<br> Nome: ' + 
+                objetoJS.nome + '<br> Número: ' + objetoJS.numero;
+
 
 
         </script>
