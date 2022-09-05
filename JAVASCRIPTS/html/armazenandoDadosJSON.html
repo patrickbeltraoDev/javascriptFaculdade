@@ -9,12 +9,26 @@
     <body>
 
         <script>
+            //objeto JSON ou Array associativo
+            var textoJson = '{"agencia": "5678-9", "tipo": "física", "nome": "Maria José", "numero": "222.222-22"}';
+
 
             //convertendo a string em um documento JSON
             var objetoJSON = JSON.stringify(textoJson);
             
             //Armazenando os dados no navegador
             localStorage.setItem("stringJSON", objetoJSON);
+
+
+
+            //Cria uma variável para receber o conteúdo armazenado com localStorage
+            var jsonText = localStorage.getItem("stringJSON");
+            
+            //Converte em um objeto Javascript
+            jsOBJ = JSON.parse(jsonText);
+
+            //Exibe o conteúdo do objeto JS com o alert
+            alert('Agência: ' + jsOBJ.agencia + ' Tipo: ' + jsOBJ.tipo + ' Nome: ' + jsOBJ.nome + ' Número: ' + jsOBJ.numero);
 
         </script>
         
